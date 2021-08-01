@@ -20,11 +20,12 @@ void loop()
 {
   unsigned long pulse_width = 0;
   Trigger();
-    while ((PORTB & 0x02) == 1)
+  
+  while ((PORTB & 0x02) == 1)
   {
     pulse_width++;
-    return pulse_width;
   }
+  
 }
 
 void Trigger()

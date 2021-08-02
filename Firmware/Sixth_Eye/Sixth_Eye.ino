@@ -1,5 +1,4 @@
 
-
 #define Trigg 0x04  
 #define Echo 0x02
 
@@ -21,20 +20,23 @@ void loop()
   unsigned long pulse_width = 0;
   Trigger();
   
-  while ((PORTB & 0x02) == 1)
+  while((PINB & Echo) == 1)
   {
     pulse_width++;
-  }
-  
-}
+   
+   } 
 
+ T_duration = clockCyclesToMicroseconds(pulse_width * 8 + 8);
+   
+   
+}
 void Trigger()
 {  
-  PORTB &= ~(0x04);// trigering turned off at the loop starting
+  PORTB &= ~(Trigg);// trigering turned off at the loop starting
   delay(2);
-  PORTB |= 0x04; // Trigger pin turned of for 
+  PORTB |= Trigg; // Trigger pin turned of foxr 
   delay(10);
-  PORTB &= ~(0x04);
+  PORTB &= ~(Trigg);
 }
 
   

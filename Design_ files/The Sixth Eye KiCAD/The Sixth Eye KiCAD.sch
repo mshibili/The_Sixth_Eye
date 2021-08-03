@@ -6,24 +6,13 @@ encoding utf-8
 Sheet 1 1
 Title "The Sixth EYE"
 Date "18/09/2020"
-Rev "v1"
+Rev "v2"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L MCU_Microchip_ATmega:ATmega328-AU U1
-U 1 1 61018B4F
-P 3450 5350
-F 0 "U1" H 3000 6850 50  0000 C CNN
-F 1 "ATmega328-AU" H 3850 3850 50  0000 C CNN
-F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 3450 5350 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3450 5350 50  0001 C CNN
-	1    3450 5350
-	1    0    0    -1  
-$EndComp
 Text GLabel 1750 1500 0    50   Input ~ 0
 Vin
 $Comp
@@ -101,8 +90,6 @@ Wire Wire Line
 Wire Wire Line
 	1750 1500 2000 1500
 Connection ~ 2000 1500
-Text GLabel 4750 1700 2    50   Output ~ 0
-3.3v
 Wire Wire Line
 	4750 1700 4550 1700
 Connection ~ 4550 1700
@@ -123,20 +110,6 @@ F 3 "" H 3450 6850 50  0001 C CNN
 	1    3450 6850
 	1    0    0    -1  
 $EndComp
-Text GLabel 4500 4200 2    50   Input ~ 0
-Echo
-Text GLabel 4500 4350 2    50   Output ~ 0
-Trig
-Wire Wire Line
-	4050 4350 4500 4350
-Wire Wire Line
-	4050 4250 4400 4250
-Wire Wire Line
-	4400 4250 4400 4200
-Wire Wire Line
-	4400 4200 4500 4200
-Text GLabel 2700 3500 0    50   Output ~ 0
-3.3v
 Wire Wire Line
 	2700 3500 2950 3500
 Wire Wire Line
@@ -146,28 +119,6 @@ Wire Wire Line
 Connection ~ 3500 3700
 Wire Wire Line
 	3500 3700 3550 3700
-$Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 61087766
-P 8250 2250
-F 0 "J1" H 8400 2050 50  0000 C CNN
-F 1 "Battery conn" H 8150 2350 50  0000 C CNN
-F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal" H 8250 2250 50  0001 C CNN
-F 3 "~" H 8250 2250 50  0001 C CNN
-	1    8250 2250
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x04_Male J2
-U 1 1 61088D78
-P 8250 3100
-F 0 "J2" H 8450 2750 50  0000 C CNN
-F 1 "US Sensor conn." H 8100 3300 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical_SMD_Pin1Left" H 8250 3100 50  0001 C CNN
-F 3 "~" H 8250 3100 50  0001 C CNN
-	1    8250 3100
-	-1   0    0    1   
-$EndComp
 Text Label 1700 1000 0    50   ~ 0
 POWER
 Wire Notes Line
@@ -180,16 +131,6 @@ Wire Notes Line
 	1350 7500 1350 2900
 Text Label 1450 3050 0    50   ~ 0
 MICROCONTROLLER
-Wire Notes Line
-	7500 3800 7500 1100
-Wire Notes Line
-	7500 1100 9500 1100
-Wire Notes Line
-	9500 1100 9500 3800
-Wire Notes Line
-	9500 3800 7500 3800
-Text Label 7650 1250 0    50   ~ 0
-CONNECTORS
 $Comp
 L Device:R_Small R1
 U 1 1 6107BDF4
@@ -202,70 +143,10 @@ F 3 "~" H 3050 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 NoConn ~ 4050 4150
-Text GLabel 4550 4550 2    50   Output ~ 0
+Text GLabel 4400 5050 2    50   Output ~ 0
 Out
-Wire Wire Line
-	4050 4550 4550 4550
-Text GLabel 7900 3000 0    50   Input ~ 0
-Echo
-Text GLabel 7900 2150 0    50   Input ~ 0
-Vin
-Wire Wire Line
-	7900 2150 8050 2150
-$Comp
-L power:GND #PWR0105
-U 1 1 610F0820
-P 7950 3300
-F 0 "#PWR0105" H 7950 3050 50  0001 C CNN
-F 1 "GND" H 7955 3127 50  0000 C CNN
-F 2 "" H 7950 3300 50  0001 C CNN
-F 3 "" H 7950 3300 50  0001 C CNN
-	1    7950 3300
-	1    0    0    -1  
-$EndComp
-Text GLabel 7850 2800 0    50   Output ~ 0
-3.3v
-Text GLabel 7900 3100 0    50   Output ~ 0
-Trig
-Wire Wire Line
-	7950 3300 7950 3200
-Wire Wire Line
-	7950 3200 8050 3200
-Wire Wire Line
-	7900 3000 8050 3000
-Wire Wire Line
-	7850 2800 7950 2800
-Wire Wire Line
-	7950 2800 7950 2900
-Wire Wire Line
-	7950 2900 8050 2900
-Wire Wire Line
-	7900 3100 8050 3100
-$Comp
-L power:GND #PWR0106
-U 1 1 61103598
-P 7900 2300
-F 0 "#PWR0106" H 7900 2050 50  0001 C CNN
-F 1 "GND" H 7905 2127 50  0000 C CNN
-F 2 "" H 7900 2300 50  0001 C CNN
-F 3 "" H 7900 2300 50  0001 C CNN
-	1    7900 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7900 2300 7900 2250
-Wire Wire Line
-	7900 2250 8050 2250
-NoConn ~ 4050 4450
-NoConn ~ 4050 5050
-NoConn ~ 4050 5150
-NoConn ~ 4050 5250
-NoConn ~ 4050 5350
-NoConn ~ 4050 5450
 NoConn ~ 4050 5550
 NoConn ~ 4050 5650
-NoConn ~ 4050 5850
-NoConn ~ 4050 5950
 NoConn ~ 4050 6050
 NoConn ~ 4050 6150
 NoConn ~ 4050 6250
@@ -275,36 +156,6 @@ NoConn ~ 4050 6550
 NoConn ~ 2850 4150
 NoConn ~ 2850 4350
 NoConn ~ 2850 4450
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 6111A7C5
-P 8200 1650
-F 0 "J3" H 8400 1450 50  0000 R CNN
-F 1 "Vibration out " H 8300 1750 50  0000 R CNN
-F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Horizontal" H 8200 1650 50  0001 C CNN
-F 3 "~" H 8200 1650 50  0001 C CNN
-	1    8200 1650
-	-1   0    0    1   
-$EndComp
-Text GLabel 7850 1550 0    50   Output ~ 0
-Out
-$Comp
-L power:GND #PWR01
-U 1 1 611362D5
-P 7900 1750
-F 0 "#PWR01" H 7900 1500 50  0001 C CNN
-F 1 "GND" H 7905 1577 50  0000 C CNN
-F 2 "" H 7900 1750 50  0001 C CNN
-F 3 "" H 7900 1750 50  0001 C CNN
-	1    7900 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7900 1750 7900 1650
-Wire Wire Line
-	7900 1650 8000 1650
-Wire Wire Line
-	7850 1550 8000 1550
 $Comp
 L The-Sixth-Eye-KiCAD-rescue:LTC3525ISC6-5-ProjectLIB U2
 U 1 1 61029ADF
@@ -354,18 +205,7 @@ Wire Notes Line
 	5350 2600 1250 2600
 Wire Notes Line
 	1250 2600 1250 750 
-$Comp
-L Mechanical:MountingHole H1
-U 1 1 61068784
-P 8800 1400
-F 0 "H1" H 8900 1446 50  0000 L CNN
-F 1 "MountingHole" H 8900 1355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2mm" H 8800 1400 50  0001 C CNN
-F 3 "~" H 8800 1400 50  0001 C CNN
-	1    8800 1400
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4050 4650
+NoConn ~ 4050 4250
 $Comp
 L Device:Crystal Y1
 U 1 1 61052EEB
@@ -451,4 +291,348 @@ Wire Wire Line
 	4450 4750 4050 4750
 Wire Wire Line
 	4050 4850 4450 4850
+$Comp
+L Sensor_Motion:ADXL343 U3
+U 1 1 6108A045
+P 8600 5300
+F 0 "U3" H 8150 5800 50  0000 L CNN
+F 1 "ADXL343" H 8900 4800 50  0000 L CNN
+F 2 "Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y" H 8600 5300 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf" H 8600 5300 50  0001 C CNN
+	1    8600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C c2
+U 1 1 61093956
+P 7250 4850
+F 0 "c2" H 7150 4950 50  0000 L CNN
+F 1 "0.1uf" H 7300 4750 50  0000 L CNN
+F 2 "" H 7288 4700 50  0001 C CNN
+F 3 "~" H 7250 4850 50  0001 C CNN
+	1    7250 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C5
+U 1 1 6109DDCB
+P 6700 4850
+F 0 "C5" H 6500 4950 50  0000 L CNN
+F 1 "2.2uf" H 6815 4805 50  0000 L CNN
+F 2 "" H 6700 4850 50  0001 C CNN
+F 3 "~" H 6700 4850 50  0001 C CNN
+	1    6700 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4700 6700 4600
+Wire Wire Line
+	6700 4600 7250 4600
+Wire Wire Line
+	7250 4600 7250 4700
+$Comp
+L power:GND #PWR04
+U 1 1 610A0FD3
+P 6700 5200
+F 0 "#PWR04" H 6700 4950 50  0001 C CNN
+F 1 "GND" H 6705 5027 50  0000 C CNN
+F 2 "" H 6700 5200 50  0001 C CNN
+F 3 "" H 6700 5200 50  0001 C CNN
+	1    6700 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 610A20D9
+P 7250 5200
+F 0 "#PWR05" H 7250 4950 50  0001 C CNN
+F 1 "GND" H 7255 5027 50  0000 C CNN
+F 2 "" H 7250 5200 50  0001 C CNN
+F 3 "" H 7250 5200 50  0001 C CNN
+	1    7250 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 5000 6700 5200
+Wire Wire Line
+	7250 5000 7250 5200
+Text GLabel 7950 5300 0    50   Output ~ 0
+MOSI
+Text GLabel 7950 5200 0    50   Input ~ 0
+MISO
+Text GLabel 4200 4550 2    50   Input ~ 0
+MISO
+Text GLabel 4200 4450 2    50   Output ~ 0
+MOSI
+Text GLabel 4400 5250 2    50   Output ~ 0
+Trig
+Text GLabel 4400 5150 2    50   Input ~ 0
+Echo
+$Comp
+L MCU_Microchip_ATmega:ATmega328-AU U1
+U 1 1 61018B4F
+P 3450 5350
+F 0 "U1" H 3000 6850 50  0000 C CNN
+F 1 "ATmega328-AU" H 3850 3850 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 3450 5350 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3450 5350 50  0001 C CNN
+	1    3450 5350
+	1    0    0    -1  
+$EndComp
+Text GLabel 4200 4350 2    50   Output ~ 0
+~CS
+Text GLabel 4200 4650 2    50   Output ~ 0
+SCK
+Text GLabel 7950 5500 0    50   Output ~ 0
+~CS
+Text GLabel 7950 5400 0    50   Output ~ 0
+SCK
+Text GLabel 4750 1700 2    50   Output ~ 0
+3.3v
+Text GLabel 2700 3500 0    50   Output ~ 0
+3.3v
+Text GLabel 7250 4350 1    50   Output ~ 0
+3.3v
+NoConn ~ 8400 4800
+NoConn ~ 8800 5800
+Wire Wire Line
+	7950 5200 8100 5200
+Wire Wire Line
+	7950 5300 8100 5300
+Wire Wire Line
+	7950 5400 8100 5400
+Wire Wire Line
+	7950 5500 8100 5500
+$Comp
+L power:GND #PWR06
+U 1 1 61140B5F
+P 8600 5900
+F 0 "#PWR06" H 8600 5650 50  0001 C CNN
+F 1 "GND" H 8605 5727 50  0000 C CNN
+F 2 "" H 8600 5900 50  0001 C CNN
+F 3 "" H 8600 5900 50  0001 C CNN
+	1    8600 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 5800 8600 5900
+Connection ~ 7250 4600
+Wire Wire Line
+	8600 4600 8600 4800
+NoConn ~ 4050 5850
+NoConn ~ 4050 5950
+Wire Wire Line
+	4050 5050 4400 5050
+Wire Wire Line
+	4050 5150 4400 5150
+Wire Wire Line
+	4050 5250 4400 5250
+Wire Wire Line
+	4050 4350 4200 4350
+Wire Wire Line
+	4050 4450 4200 4450
+Wire Wire Line
+	4050 4550 4200 4550
+Wire Wire Line
+	4050 4650 4200 4650
+Text GLabel 4400 5350 2    50   Output ~ 0
+VDD_IO
+Wire Wire Line
+	4050 5350 4400 5350
+Wire Wire Line
+	7250 4600 7250 4350
+Text GLabel 7800 3950 0    50   Output ~ 0
+VDD_IO
+$Comp
+L Device:R_Small R2
+U 1 1 611F0DD6
+P 8100 3950
+F 0 "R2" V 8000 3950 50  0000 C CNN
+F 1 "2.2R" V 8200 3950 50  0000 C CNN
+F 2 "" H 8100 3950 50  0001 C CNN
+F 3 "~" H 8100 3950 50  0001 C CNN
+	1    8100 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 3950 7800 3950
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 611EDDE2
+P 8550 4150
+F 0 "Q1" V 8785 4150 50  0000 C CNN
+F 1 "BC547" V 8876 4150 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8750 4075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 8550 4150 50  0001 L CNN
+	1    8550 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 4600 8250 4600
+Wire Wire Line
+	8750 4250 8800 4250
+Wire Wire Line
+	8800 4250 8800 4800
+Wire Wire Line
+	8550 3950 8200 3950
+Wire Wire Line
+	8350 4250 8250 4250
+Wire Wire Line
+	8250 4250 8250 4600
+Connection ~ 8250 4600
+Wire Wire Line
+	8250 4600 8600 4600
+Text GLabel 4400 5450 2    50   Input ~ 0
+INT1
+Wire Wire Line
+	4400 5450 4050 5450
+Text GLabel 9250 5300 2    50   Input ~ 0
+INT1
+Wire Wire Line
+	9250 5300 9100 5300
+NoConn ~ 9100 5400
+Wire Notes Line
+	6400 3700 9600 3700
+Wire Notes Line
+	9600 3700 9600 6250
+Wire Notes Line
+	9600 6250 6400 6250
+Wire Notes Line
+	6400 6250 6400 3700
+Text Label 6500 3850 0    59   ~ 0
+Accelerometer
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6124D718
+P 8900 1200
+F 0 "H2" H 9000 1246 50  0000 L CNN
+F 1 "MountingHole" H 9000 1155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2mm" H 8900 1200 50  0001 C CNN
+F 3 "~" H 8900 1200 50  0001 C CNN
+	1    8900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61068784
+P 8900 950
+F 0 "H1" H 9000 996 50  0000 L CNN
+F 1 "MountingHole" H 9000 905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2mm" H 8900 950 50  0001 C CNN
+F 3 "~" H 8900 950 50  0001 C CNN
+	1    8900 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 1100 8100 1100
+Wire Wire Line
+	8000 1200 8100 1200
+Wire Wire Line
+	8000 1300 8000 1200
+$Comp
+L power:GND #PWR01
+U 1 1 611362D5
+P 8000 1300
+F 0 "#PWR01" H 8000 1050 50  0001 C CNN
+F 1 "GND" H 8005 1127 50  0000 C CNN
+F 2 "" H 8000 1300 50  0001 C CNN
+F 3 "" H 8000 1300 50  0001 C CNN
+	1    8000 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 7950 1100 0    50   Output ~ 0
+Out
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 6111A7C5
+P 8300 1200
+F 0 "J3" H 8500 1000 50  0000 R CNN
+F 1 "Vibration out " H 8400 1300 50  0000 R CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Horizontal" H 8300 1200 50  0001 C CNN
+F 3 "~" H 8300 1200 50  0001 C CNN
+	1    8300 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8000 1800 8150 1800
+Wire Wire Line
+	8000 1850 8000 1800
+$Comp
+L power:GND #PWR0106
+U 1 1 61103598
+P 8000 1850
+F 0 "#PWR0106" H 8000 1600 50  0001 C CNN
+F 1 "GND" H 8005 1677 50  0000 C CNN
+F 2 "" H 8000 1850 50  0001 C CNN
+F 3 "" H 8000 1850 50  0001 C CNN
+	1    8000 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2650 8150 2650
+Wire Wire Line
+	8050 2450 8150 2450
+Wire Wire Line
+	8050 2350 8050 2450
+Wire Wire Line
+	7950 2350 8050 2350
+Wire Wire Line
+	8000 2550 8150 2550
+Wire Wire Line
+	8050 2750 8150 2750
+Wire Wire Line
+	8050 2850 8050 2750
+Text GLabel 8000 2650 0    50   Output ~ 0
+Trig
+Text GLabel 7950 2350 0    50   Output ~ 0
+3.3v
+$Comp
+L power:GND #PWR0105
+U 1 1 610F0820
+P 8050 2850
+F 0 "#PWR0105" H 8050 2600 50  0001 C CNN
+F 1 "GND" H 8055 2677 50  0000 C CNN
+F 2 "" H 8050 2850 50  0001 C CNN
+F 3 "" H 8050 2850 50  0001 C CNN
+	1    8050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1700 8150 1700
+Text GLabel 8000 1700 0    50   Input ~ 0
+Vin
+Text GLabel 8000 2550 0    50   Input ~ 0
+Echo
+Text Label 7750 800  0    50   ~ 0
+CONNECTORS
+Wire Notes Line
+	9600 3350 7600 3350
+Wire Notes Line
+	9600 650  9600 3350
+Wire Notes Line
+	7600 650  9600 650 
+Wire Notes Line
+	7600 3350 7600 650 
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 61088D78
+P 8350 2650
+F 0 "J2" H 8550 2300 50  0000 C CNN
+F 1 "US Sensor conn." H 8200 2850 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical_SMD_Pin1Left" H 8350 2650 50  0001 C CNN
+F 3 "~" H 8350 2650 50  0001 C CNN
+	1    8350 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 61087766
+P 8350 1800
+F 0 "J1" H 8500 1600 50  0000 C CNN
+F 1 "Battery conn" H 8250 1900 50  0000 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal" H 8350 1800 50  0001 C CNN
+F 3 "~" H 8350 1800 50  0001 C CNN
+	1    8350 1800
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

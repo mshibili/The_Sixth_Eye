@@ -605,7 +605,7 @@ U 1 1 61087766
 P 8350 1800
 F 0 "J2" H 8500 1600 50  0000 C CNN
 F 1 "Battery conn" H 8250 1900 50  0000 C CNN
-F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal" H 8350 1800 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal" H 8350 1800 50  0001 C CNN
 F 3 "~" H 8350 1800 50  0001 C CNN
 	1    8350 1800
 	-1   0    0    1   

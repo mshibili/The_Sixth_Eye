@@ -1,4 +1,11 @@
-
+/*
+* Implimenting US sensor distance measurement.
+* Accelerometer interrupt awakens mC from sleep mode at of 275 - pending
+*
+* Author:
+* Muhammed Shibili k
+* mshibili01@gmail.com
+*/
 #define Trigg 0x04  
 #define Echo 0x02
 

@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name NCP1402)(type Legacy)(uri "/home/mshibili/Documents/Arduino/The Sixth Eye/Design files/lib_fp.pretty/NCP1402.lib")(options "")(descr ""))
+  (lib (name ProjectLIB)(type Legacy)(uri "/home/mshibili/Documents/Arduino/The Sixth Eye/Design files/lib_sch/ProjectLIB.lib")(options "")(descr ""))
+  (lib (name The-Sixth-Eye-KiCAD-rescue)(type Legacy)(uri "${KIPRJMOD}/The Sixth Eye KiCAD-rescue.lib")(options "")(descr ""))
+)
